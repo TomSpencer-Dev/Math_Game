@@ -7,10 +7,21 @@ class Game
   end
 
   def start
-  puts @player_1.name
-  puts @player_1.lives
-    # The game loop or logic to start the game
+    q = Question.new(@player_1.name, @player_2.name)
+    puts  q.question
+    answer = q.num1 + q.num2
+    input = gets.chomp
+    checkAnswer(answer, input)
+
   end
+def checkAnswer(a, i)
+  if a == i
+    puts "YES! You are correct."
+  else
+    puts "Seriously? No!"
+  end
+end
+
 
   # Other methods related to game logic
 end
