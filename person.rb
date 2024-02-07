@@ -1,10 +1,10 @@
 class Person
 
-  attr_reader :name, :lives
+  attr_accessor :name, :lives
 
-  def initialize(n, l) 
-    @name = n
-    @lives = l
+  def initialize(name, lives) 
+    @name = name
+    @lives = lives
   end
 end
 
